@@ -61,7 +61,7 @@ const Row = ({record, time, date}) => {
   const editRow = () => setEditable(true);
   const saveRow = () => {
     setLoading(true);
-    fetch('http://localhost:4000/records/edit', {
+    fetch('/records/edit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

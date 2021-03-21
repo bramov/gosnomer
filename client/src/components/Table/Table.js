@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import Row from '../Row/Row';
 import Loader from "../Loader/Loader";
 
-const timeIntervals = ['9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00'];
+const timeIntervals = ['8:30', '9:30', '10:30', '11:30', '12:30', '14:00', '15:00', '16:00', '17:00'];
 
 const Table = ({date, active}) => {
   const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ const Table = ({date, active}) => {
   }, [active]);
 
   const getData = async () => {
-    await fetch(`http://localhost:4000/records/all?date=${date}`)
+    await fetch(`/records/all?date=${date}`)
       .then(res => res.json())
       .then(data => {
         setData(data);

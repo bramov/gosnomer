@@ -6,7 +6,7 @@ const Login = ({history, setToken}) => {
   const [password, setPassword] = useState('');
 
   const logIn = () => {
-    fetch('http://localhost:4000/auth/login', {
+    fetch('/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
