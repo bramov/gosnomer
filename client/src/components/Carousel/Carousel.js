@@ -11,7 +11,7 @@ const Carousel = () => {
   const generateDates = () => {
     const date = new Date();
     const fourDates = [];
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 30; i++) {
       const currentDate = new Date();
       currentDate.setDate(date.getDate() + i);
       const currDay = currentDate.getDate() < 10 ? '0' + currentDate.getDate() : currentDate.getDate();
