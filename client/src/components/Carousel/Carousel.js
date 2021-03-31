@@ -14,8 +14,12 @@ const Carousel = () => {
     const day = date.getDate();
     const fourDates = [];
     for (let i = 0; i < 4; i++) {
-      const currentDate = (day + i < 10 ? '0' + (day + i) : day + i) + '-' + (month < 10 ? '0' + month : month)+ '-' + date.getFullYear();
-      fourDates.push(currentDate);
+      const currentDate = new Date();
+      currentDate.setDate(date.getDate() + i);
+      const currDay = currentDate.getDate() < 10 ? '0' + currentDate.getDate() : currentDate.getDate();
+      const currMonth = currentDate.getMonth() < 10 ? '0' + currentDate.getMonth() : currentDate.getMonth();
+      const stringDate = currDay + '-' + currMonth + '-' + currentDate.getFullYear();
+      fourDates.push(stringDate);
     }
     setDates(fourDates);
   }
