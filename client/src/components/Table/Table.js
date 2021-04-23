@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import Row from '../Row/Row';
 import Loader from "../Loader/Loader";
 
-const timeIntervals = ['08:30', '09:30', '10:30', '11:30', '12:30', '14:00', '15:00', '16:00', '17:00'];
+const timeIntervals = ['08:30', '09:00', '09:30', '10:30', '11:30', '12:30', '13:00', '14:00', '15:00', '15:30', '16:00', '16:30', '17:00'];
 
 const Table = ({date, active}) => {
   const [data, setData] = useState([]);
